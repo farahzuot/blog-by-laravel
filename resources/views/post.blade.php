@@ -2,8 +2,10 @@
 <x-layout>
     <article>
         <h1> {{$post->title}} </h1>
-        <h4> {{$post->date}} </h4>
-        <div> {!! $post->body !!} </div>
+        <p>
+            <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
+        </p>
+        <div> <p>{{$post->body}}</p> </div>
     </article>
 
     <a href="/">Home</a>
